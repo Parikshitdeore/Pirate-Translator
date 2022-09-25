@@ -16,12 +16,12 @@ body{
 .heading{
     margin-top: 0px;
     padding: 1rem;
-    color:var(--primary);
+    color:#ca8a04;
     text-align: center;
-    background-color:black;
+    background-color:#111111;
 }
 textarea{
-    background-color: black;
+    background-color: #111111;
     margin: auto;
     margin-bottom: 5rem;
     box-sizing: border-box;
@@ -31,7 +31,7 @@ textarea{
     font-size: large;
     font-family: inherit;
     margin-top: 5rem;
-    color: white;
+    color: #ca8a04;
     font-size: 1.5rem;
     width: 450px; height: 82px;
 }
@@ -61,9 +61,11 @@ textarea{
     min-height: 10vh;
     max-height: 20vh;
     border: 1px solid black;
-    background-color: #713f12;
+    background-color: #111111;
     width: 400px;
     width: 400px; height: 82px;
+    font-size: 1.5rem;
+    color: #ca8a04;
 }
 
 footer {
@@ -71,8 +73,15 @@ footer {
     bottom: 0;
     width: 100%;    
     background-color: var();
-    color:var(--primary);
+    color:#94a3b8;
     text-align: center;
-    background-color: black;
+    background-color: #111111;
     padding-bottom: 1rem;
+    
+}
+p{
+    font-size: 1.5rem;
+}
+h1{
+    color: #ca8a04;
 }

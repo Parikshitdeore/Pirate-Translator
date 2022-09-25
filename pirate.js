@@ -1,19 +1,22 @@
-var TranslationInput = document.querySelector("#translate-input");
+var translateInput = document.querySelector("#translate-input");
 var button = document.querySelector("#translate-button")
-var TranslationOutput = document.querySelector("#translate-output")
 button.addEventListener("click", buttonClickHandler)
-var url = "https://api.funtranslations.com/translate/pirate.json";
+var translateOutput = document.querySelector("#translate-output")
 
-function buttonClickHandler(event){
-    var input = TranslationInput.value;
-    var finalURL = constructURL(input);
-    console.log(finalURL)
-    fetch(finalURL)
-    .then(response => response.json())
-    .then(json=>{TranslationOutput.innertext = json.contents.translated;})
-    .catch(()=> alert("an error occured"))
-}
+var url = "https://api.funtranslations.com/translate/pirate.json";
 
 function constructURL(inputText){
     return url + "?" + "text=" +inputText;
+}
+
+function buttonClickHandler(event){
+    var input = translateInput.value;
+    var finalURL = constructURL(input)
+    console.log(finalURL)
+    
+    fetch(finalURL)
+    .then(response => response.json())
+    .then(json=>{var translatedText = json.contents.translated;
+        translateOutput.innerText=translatedText;})
+    .catch(()=> alert("an error occured"))
 }
